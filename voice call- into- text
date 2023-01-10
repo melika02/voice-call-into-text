@@ -1,0 +1,8 @@
+>>> import speech_recognition as sr
+>>> from pathlib import Path
+>>> r = sr.Recognizer()
+>>> audio_file = Path("C:\\Users\\mmpcs\\OneDrive\\Desktop\\New.wav")
+>>> with sr.AudioFile(audio_file.as_posix()) as source:
+...     audio = r.record(source)
+...     text = r.recognize_google(audio)
+...     print(text)
